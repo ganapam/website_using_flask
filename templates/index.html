@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ANIMALS</title>
+    <link rel="stylesheet" href="../static/index.css"link>
+
+</head>
+
+<body >
+    {% if session.logged_in %}
+    <!-- Other content for logged-in users -->
+
+    <header>
+        <h1 style="text-align: center;box-shadow: 0px 0px 40px;border-radius: 8px;">Welcome to the Animal World</h1>
+    </header>
+
+    <nav>
+        <div>
+            <a href="#" onclick="showTab('home')">Home</a>
+            <a href="#" onclick="showTab('videos')">Videos</a>
+            <a href="#" onclick="showTab('images')">Images</a>
+            <a href="#" onclick="showTab('aboutus')">About Us</a>
+            <a href="#" onclick="showTab('contactus')">Contact Us</a>
+        </div>
+        <form class="form-inline m-2 ml-10 mr-9">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Search</button>
+          </form>
+        <div>
+            <a style="color: red;" href="{{ url_for('logout') }}">Logout</a>
+        </div>
+    </nav>
+
+    <section class="tab-content active" id="home-content" >
+        <h2>Home</h2><br><br><br>
+        <!-- Home content goes here -->
+        
+        <img src="../static/assests/small-pets1.jpg" alt="small-pets1.jpg" class="custom-image">
+        <h1 style="position:absolute;top: 60%; right: 87%;">Rat</h1>
+        <img src="../static/assests/male_female_white_lions-f19c4208f40643f9b4817756af96b1c5.webp" alt="small-pets1.jpg" class="custom-image">
+        <h1 style="position:absolute;top: 60%; right: 61%;">Lions</h1>
+        <img src="../static/assests/monkey.jpeg" alt="small-pets1.jpg" class="custom-image">
+        <h1 style="position:absolute;top: 60%; right: 35%;">MONKEY</h1>
+        <img src="../static/assests/elephant.jpeg" alt="small-pets1.jpg" class="custom-image">
+        <h1 style="position:absolute;top: 60%; right: 11%;">ELEPHANT</h1><br><br><br><br>
+        <img src="../static/assests/zeerafi.jpeg" alt="small-pets1.jpg" class="custom-image">
+        <h1 style="position:absolute;top: 96%; right: 83%;">ZEBRA</h1>
+        <img src="../static/assests/horse.jpeg" alt="small-pets1.jpg" class="custom-image">
+        <h1 style="position:absolute;top: 96%; right: 61%;">HORSE</h1>
+        <img src="../static/assests/puupy.jpeg" alt="small-pets1.jpg" class="custom-image">
+        <h1 style="position:absolute;top: 96%; right: 35%;">PUPUPY</h1>
+        <img src="../static/assests/hen.webp" alt="small-pets1.jpg" class="custom-image">
+        <h1 style="position:absolute;top: 96%; right: 14%;">HEN</h1>
+    </section>
+
+    <section class="tab-content" id="videos-content">
+        <h2>Videos</h2><br><br><br>
+        <!-- Videos content goes here -->
+        <div  style="text-align: center;">
+            <video  class="center" width="820" height="440" controls>
+                <source src="../static/assests/190301_02_KenyaWildlife_15.mp4" type="video/mp4">
+                <source src="movie.ogg" type="video/ogg">
+                Your browser does not support the video tag
+                </video>
+        </div>
+
+        
+    </section>
+
+    <section class="tab-content" id="images-content">
+        <h2>Images</h2><br><br><br><br>
+        <!-- Images content goes here -->
+        <img src="../static/assests/paarot.jpeg" alt="small-pets1.jpg" class="custom-image">
+        <img src="../static/assests/1.jpg" alt="small-pets1.jpg" class="custom-image">
+        <img src="../static/assests/2.jpeg" alt="small-pets1.jpg" class="custom-image">
+        <img src="../static/assests/3.jpeg" alt="small-pets1.jpg" class="custom-image"><br><br>
+
+        <img src="../static/assests/4.jpeg" alt="small-pets1.jpg" class="custom-image">
+        <img src="../static/assests/5.jpeg" alt="small-pets1.jpg" class="custom-image">
+        <img src="../static/assests/6.jpeg" alt="small-pets1.jpg" class="custom-image">
+        <img src="../static/assests/7.jpeg" alt="small-pets1.jpg" class="custom-image"><br><br>
+
+        <img src="../static/assests/8.jpeg" alt="small-pets1.jpg" class="custom-image">
+        <img src="../static/assests/9.jpeg" alt="small-pets1.jpg" class="custom-image">
+        <img src="../static/assests/10.jpeg" alt="small-pets1.jpg" class="custom-image">
+        <img src="../static/assests/11.jpeg" alt="small-pets1.jpg" class="custom-image"><br><br>
+
+        <img src="../static/assests/12.webp" alt="small-pets1.jpg" class="custom-image">
+        <img src="../static/assests/13.webp" alt="small-pets1.jpg" class="custom-image">
+        <img src="../static/assests/14.jpeg" alt="small-pets1.jpg" class="custom-image">
+        <img src="../static/assests/15.webp" alt="small-pets1.jpg" class="custom-image"><br><br>
+
+        <img src="../static/assests/16.jpeg" alt="small-pets1.jpg" class="custom-image">
+        <img src="../static/assests/17.jpeg" alt="small-pets1.jpg" class="custom-image">
+        <img src="../static/assests/18.jpeg" alt="small-pets1.jpg" class="custom-image">
+        <img src="../static/assests/19.jpeg" alt="small-pets1.jpg" class="custom-image"><br><br>
+
+        <img src="../static/assests/20.webp" alt="small-pets1.jpg" class="custom-image">
+        <img src="../static/assests/21.webp" alt="small-pets1.jpg" class="custom-image">
+        <img src="../static/assests/22.webp" alt="small-pets1.jpg" class="custom-image">
+        <img src="../static/assests/23.jpg" alt="small-pets1.jpg" class="custom-image"><br><br>
+        
+        <img src="../static/assests/24.webp" alt="small-pets1.jpg" class="custom-image">
+        <img src="../static/assests/25.jpeg" alt="small-pets1.jpg" class="custom-image">
+        <img src="../static/assests/26.jpg" alt="small-pets1.jpg" class="custom-image">
+        <img src="../static/assests/27.jpeg" alt="small-pets1.jpg" class="custom-image">
+    </section>
+
+    <section class="tab-content" id="aboutus-content">
+        <h2>About Us</h2>
+        <!-- About Us content goes here -->
+        <a href="#"><img src="../static/assests/mini photo.JPG" alt="mahendra image" class="about"></a>
+        <h1 style="position:absolute;top: 45%; left: 40%;">MAHENDRA REDDY GANAPAM</h1><br><br><br><br><br>
+        <h3>"This is Mahendra Reddy Ganapam. I completed my Bachelor of Technology (B.Tech) in Computer Science and Engineering in the year 2023. My skills include knowledge in HTML, CSS, Python, MySQL, networks, and AWS.
+
+            I have completed two projects. The first one, during my college days, involved URL detection using machine learning techniques, specifically employing the logistic algorithm to enhance attack awareness and reduce vulnerability.
+            
+            In AWS, I participated in a restart program that concluded in December 2023. During this program, I worked on a project involving automation of backup and restore processes into AWS. We utilized seven tools in AWS, including S3, Lambda, CloudWatch, ECR, RDS, and MySQL connections."</h3>
+    </section>
+
+    <section class="tab-content" id="contactus-content">
+        <h2>Contact Us</h2><br><br><br>
+        <!-- Contact Us content goes here -->
+        
+       <div class="abcd"> <a href="https://www.facebook.com/"><img src="../static/assests/icons8-fb-69.png" alt="FACEBOOK"></a>
+            <a href="https://www.instagram.com/"><img src="../static/assests/icons8-instagram-48.png" alt="INSTAGRAM"></a>
+            <a href="https://www.youtube.com/"><img src="../static/assests/icons8-youtube-94.png" alt="YOUTUBE"></a>
+        <a href="https://github.com/"><img src="../static/assests/icons8-github-64.png" alt="GITHUB"></a>
+            <a href="https://www.linkedin.com/feed/"><img src="../static/assests/icons8-linkedin-64.png" alt="LINKEDIN">
+            
+    </div><br><br>
+
+            <div class="conta">Email:ganapammahendra28@gmai.com  
+                <p>contact no :- 7095863146</p></div>
+       
+
+    </section>
+
+    <!-- Footer without the copyright line -->
+    {% endif %}
+
+
+
+    <!-- JavaScript to handle tab switching -->
+    <script>
+        function showTab(tabName) {
+            // Hide all tabs
+            var tabs = document.getElementsByClassName('tab-content');
+            for (var i = 0; i < tabs.length; i++) {
+                tabs[i].classList.remove('active');
+            }
+
+            // Show the selected tab
+            var selectedTab = document.getElementById(tabName + '-content');
+            selectedTab.classList.add('active');
+        }
+    </script>
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.6.0/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.6.0/firebase-analytics.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+          apiKey: "AIzaSyBlGeZs4Ucbv60aHqfxzd61hIuUJzZSfnI",
+          authDomain: "project-d645e.firebaseapp.com",
+          projectId: "project-d645e",
+          storageBucket: "project-d645e.appspot.com",
+          messagingSenderId: "259048868001",
+          appId: "1:259048868001:web:15976d1a26fb2b678d48e0",
+          measurementId: "G-SK9W9J7R8W"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+      </script>
+</body>
+
+</html>

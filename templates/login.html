@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Login Page</title>
+</head>
+<body style="background-image: url(../static/assests/24.webp);background-repeat: no-repeat;background-size: cover;">
+    <h2 style="position:absolute;top: 25%; left: 45%; color: red;">Login Page</h2>
+
+    <form method="post" action="{{ url_for('login') }}" id="loginForm" style="color: rgb(0, 255, 208);">
+       
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+
+        <button type="submit">Login</button>
+    </form>
+
+    <!-- Add a link to the registration page -->
+    <p style="position:absolute;top: 65%; left: 43%; color: rgb(42, 54, 165);">Don't have an account click <a style="color: red;" href="{{ url_for('register') }}">Register here</a>.</p>
+
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <script>
+                // JavaScript code to display a notification only after form submission
+                var formSubmitted = false;
+
+                var loginForm = document.getElementById('loginForm');
+                loginForm.addEventListener('submit', function (event) {
+                    if (!formSubmitted) {
+                        event.preventDefault();  // Prevent the form from submitting
+                        alert("{{ messages[-1] }}");  // Display the last message
+                        formSubmitted = true;
+                        loginForm.submit();  // Resubmit the form after displaying the alert
+                    }
+                });
+            </script>
+           
+        {% endif %}
+    {% endwith %}
+</body>
+</html>
